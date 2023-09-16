@@ -1,0 +1,48 @@
+:root {
+  --Blue: #345ff6;
+  --GunMetal: #253347;
+  --ElectricBlue: #5e6e85;
+  --Borders: #d8e2e7;
+}
+.heading-xl {
+  font-family: "Inter", sans-serif;
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.heading-l {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.heading-m {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.heading-s {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.body-m {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.body-m-bold {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.body-s {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
