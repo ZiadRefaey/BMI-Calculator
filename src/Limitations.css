@@ -1,0 +1,48 @@
+.limitations-container {
+  padding: 72px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+.limitations-container h3 {
+  margin-bottom: 32px;
+}
+.limitations-desciption {
+  margin-bottom: 56px;
+  text-align: center;
+}
+.limit-container {
+  padding: 24px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: none;
+}
+.limit-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  border-radius: 16px;
+}
+.limit-header {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.limit-icon-container {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.limit-header h4 {
+  align-self: center;
+}
