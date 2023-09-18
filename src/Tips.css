@@ -1,0 +1,29 @@
+.tips-container {
+  margin-top: 71.61px;
+  padding: 56px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  background-image: linear-gradient(to bottom right, #fff, #f5f9ff);
+}
+/* .tip-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+} */
+.tip-img-container {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 32px;
+}
+.tip-icon {
+  width: 100%;
+  height: 100%;
+}
+.tip-title {
+  margin-bottom: 24px;
+}
