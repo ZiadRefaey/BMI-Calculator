@@ -6,30 +6,35 @@ import pregnancy from "./assets/images/icon-pregnancy.svg";
 import race from "./assets/images/icon-race.svg";
 const limitations = [
   {
+    id: 1,
     icon: gender,
     title: "Gender",
     description:
       "The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.",
   },
   {
+    id: 2,
     icon: age,
     title: "Age",
     description:
       "In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.",
   },
   {
+    id: 3,
     icon: muscle,
     title: "Muscle",
     description:
       "BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.",
   },
   {
+    id: 4,
     icon: pregnancy,
     title: "Pregnancy",
     description:
       "Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.",
   },
   {
+    id: 5,
     icon: race,
     title: "Race",
     description:
@@ -67,6 +72,7 @@ export default function Limitations() {
         </p>
         {limitations.map((limit) => (
           <Limit
+            key={limit.id}
             icon={limit.icon}
             title={limit.title}
             description={limit.description}

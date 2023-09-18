@@ -43,7 +43,7 @@
 .hero h2 {
   color: var(--GunMetal);
 }
-.metric {
+.metric-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,7 +76,9 @@
   align-items: start;
   justify-content: start;
   flex-direction: column;
-  gap: 16px;
+}
+.weight {
+  margin-top: 16px;
 }
 .input-container {
   padding: 20px 24px;
@@ -97,6 +99,7 @@
   border: none;
   outline: none;
   font-size: 24px;
+  width: 100%;
   max-width: 173px;
 }
 .bmi-results {
@@ -116,4 +119,10 @@
 }
 .bmi-results-body span {
   font-weight: 700;
+}
+.input-imperial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
