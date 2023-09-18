@@ -4,6 +4,11 @@
   --ElectricBlue: #5e6e85;
   --Borders: #d8e2e7;
 }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 .heading-xl {
   font-family: "Inter", sans-serif;
   font-size: 4rem;
@@ -45,4 +50,16 @@
   font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 400;
+}
+.blue {
+  color: var(--Blue);
+}
+.gunmetal {
+  color: var(--GunMetal);
+}
+.electricblue {
+  color: var(--ElectricBlue);
+}
+.white {
+  color: white;
 }

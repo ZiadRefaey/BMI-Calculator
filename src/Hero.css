@@ -1,0 +1,119 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  padding: 24px;
+  padding-top: 32px;
+  padding-bottom: 217px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  background-image: linear-gradient(to bottom right, #fff, #cfe1fa);
+  position: relative;
+}
+.logo {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.hero h1 {
+  color: var(--GunMetal);
+}
+.hero-text {
+  color: var(--ElectricBlue);
+}
+.bmi-calculator {
+  background-color: white;
+  border-radius: 16px;
+  width: 328px;
+  padding: 24px;
+  position: absolute;
+  top: 471px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+}
+.hero h2 {
+  color: var(--GunMetal);
+}
+.metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.radio-button {
+  width: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: var(--GunMetal);
+}
+.radio-button input {
+  width: 31px;
+  height: 31px;
+}
+.radio-button input:hover {
+  background-color: blue;
+}
+.form {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 24px;
+}
+.body-details {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 16px;
+}
+.input-container {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--Borders);
+}
+.body-label {
+  margin-bottom: 8px;
+}
+.metric-unit {
+  color: var(--Blue);
+}
+.input-container input {
+  border: none;
+  outline: none;
+  font-size: 24px;
+  max-width: 173px;
+}
+.bmi-results {
+  background-image: linear-gradient(to right, #345ff6, #587dff);
+  padding: 32px;
+  border-radius: 16px;
+  color: white;
+  text-align: start;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+.bmi-results-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bmi-results-body span {
+  font-weight: 700;
+}

@@ -1,8 +1,13 @@
-import { useState } from "react";
 import "./App.css";
-
+import Hero from "./Hero";
+import BMIExplination from "./BMIExplination";
 function App() {
-  return <></>;
+  return (
+    <>
+      <Hero />
+      <BMIExplination />
+    </>
+  );
 }
 
 export default App;
