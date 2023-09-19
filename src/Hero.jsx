@@ -7,6 +7,10 @@ export default function Hero() {
   const [metric, setMetric] = useState("metric");
   const [MetricBMI, setMetricBMI] = useState(0);
   const [ImperialBMI, setImperialBMI] = useState(0);
+  const [lowerMetricRange, setLowerMetricRange] = useState();
+  const [higherMetricRange, setHigherMetricRange] = useState();
+  const [lowerImperialRange, setLowerImperialRange] = useState();
+  const [higherImperialRange, setHigherImperialRange] = useState();
   return (
     <>
       <header className="hero">
@@ -15,15 +19,21 @@ export default function Hero() {
           <BMIForm
             metric={metric}
             setMetric={setMetric}
-            MetricBMI={MetricBMI}
-            ImperialBMI={ImperialBMI}
             setMetricBMI={setMetricBMI}
             setImperialBMI={setImperialBMI}
+            setLowerMetricRange={setLowerMetricRange}
+            setHigherMetricRange={setHigherMetricRange}
+            setLowerImperialRange={setLowerImperialRange}
+            setHigherImperialRange={setHigherImperialRange}
           />
           <BMIResults
             MetricBMI={MetricBMI}
             ImperialBMI={ImperialBMI}
             metric={metric}
+            lowerMetricRange={lowerMetricRange}
+            higherMetricRange={higherMetricRange}
+            lowerImperialRange={lowerImperialRange}
+            higherImperialRange={higherImperialRange}
           />
         </section>
       </header>

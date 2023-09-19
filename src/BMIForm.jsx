@@ -4,10 +4,12 @@ import "./hero.css";
 export default function BMIForm({
   metric,
   setMetric,
-  MetricBMI,
-  ImperialBMI,
   setMetricBMI,
   setImperialBMI,
+  setLowerImperialRange,
+  setLowerMetricRange,
+  setHigherMetricRange,
+  setHigherImperialRange,
 }) {
   const [metricHeight, setMetricHeight] = useState("");
   const [metricWeight, setMetricWeight] = useState("");
@@ -22,8 +24,9 @@ export default function BMIForm({
       if (metricHeight && metricWeight) {
         const heightInMeters = metricHeight / 100;
         setMetricBMI(metricWeight / (heightInMeters * heightInMeters));
+        setLowerMetricRange(18.5 * (heightInMeters * heightInMeters));
+        setHigherMetricRange(24.9 * (heightInMeters * heightInMeters));
       }
-      console.log(MetricBMI);
     },
     [metricHeight, metricWeight]
   );
@@ -44,6 +47,8 @@ export default function BMIForm({
         setImperialBMI(
           (weightInPounds * 703) / (heightInInches * heightInInches)
         );
+        setLowerImperialRange((18.5 * heightInInches * heightInInches) / 703);
+        setHigherImperialRange((24.9 * heightInInches * heightInInches) / 703);
       }
     },
     [imperialHeightFt, imperialHeightIn, imperialWeightSt, imperialWeightLbs]
@@ -106,7 +111,10 @@ export default function BMIForm({
                 />
                 <p className="heading-m metric-unit">cm</p>
               </div>
-              <label className="body-label  body-s gunmetal" htmlFor="weight">
+              <label
+                className="body-label  body-s gunmetal weight"
+                htmlFor="weight"
+              >
                 Weight
               </label>
               <div className="input-container">
