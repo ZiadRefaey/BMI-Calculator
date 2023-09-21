@@ -37,8 +37,10 @@ export default function BMIResults({
   if (MetricBMI && metric === "metric") {
     BMIResult = (
       <div className="bmi-results-header">
-        <h3 className="body-m-bold">Your BMI is...</h3>
-        <span className="heading-l">{MetricBMI.toFixed(1)}</span>
+        <div className="bmi-results-title">
+          <h3 className="body-m-bold">Your BMI is...</h3>
+          <span className="heading-l">{MetricBMI.toFixed(1)}</span>
+        </div>
         <div className="bmi-results-body">
           <p className="body-s">
             Your BMI suggests you’re {MetricHealthLevel}. Your ideal weight is
@@ -54,12 +56,14 @@ export default function BMIResults({
   } else if (ImperialBMI && metric === "imperial") {
     BMIResult = (
       <div className="bmi-results-header">
-        <h3 className="body-m-bold">Your BMI is...</h3>
-        <span className="heading-l">{ImperialBMI.toFixed(1)}</span>
+        <div className="bmi-results-title">
+          <h3 className="body-m-bold">Your BMI is...</h3>
+          <span className="heading-l">{ImperialBMI.toFixed(1)}</span>
+        </div>
         <div className="bmi-results-body">
           <p className="body-s">
             Your BMI suggests you’re {ImperialHealthLevel}. Your ideal weight is
-            between{" "}
+            between
             <span>
               {lowerImperialRange.toFixed(1)}lbs -
               {higherImperialRange.toFixed(1)}lbs.
@@ -70,7 +74,7 @@ export default function BMIResults({
     );
   } else {
     BMIResult = (
-      <div className="bmi-results-header">
+      <div className="bmi-results-header empty-results">
         <h3 className="heading-m">Welcome</h3>
         <p className="body-s white">
           Enter your height and weight and you’ll see your BMI result here

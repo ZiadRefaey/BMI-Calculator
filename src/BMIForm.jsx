@@ -59,7 +59,7 @@ export default function BMIForm({
   }
   return (
     <>
-      <h2 className="heading-m">Enter your details below</h2>
+      <h2 className="heading-m form-header">Enter your details below</h2>
       <form className="form">
         <div className="metric-container">
           <div className="radio-button">
@@ -92,111 +92,127 @@ export default function BMIForm({
         <div className="body-details">
           {metric === "metric" && (
             <>
-              <label
-                className="body-label body-s gunmetal"
-                htmlFor="metric-height"
-              >
-                Height
-              </label>
-              <div className="input-container ">
-                <input
-                  className="heading-m gunmetal"
-                  type="number"
-                  value={metricHeight}
-                  onChange={(e) => {
-                    setMetricHeight(e.target.value);
-                    MetricBMI = metricWeight / (metricHeight * metricHeight);
-                  }}
-                  id="height"
-                />
-                <p className="heading-m metric-unit">cm</p>
-              </div>
-              <label
-                className="body-label  body-s gunmetal weight"
-                htmlFor="weight"
-              >
-                Weight
-              </label>
-              <div className="input-container">
-                <input
-                  value={metricWeight}
-                  onChange={(e) => {
-                    setMetricWeight(e.target.value);
-                    MetricBMI = metricWeight / (metricHeight * metricHeight);
-                  }}
-                  className="heading-m gunmetal"
-                  type="number"
-                  id="metric-weight"
-                />
-                <p className="heading-m metric-unit">kg</p>
+              <div className="form-inputs-container  metric-inputs-container">
+                <div className="label-input-container">
+                  <label
+                    className="body-label body-s gunmetal"
+                    htmlFor="metric-height"
+                  >
+                    Height
+                  </label>
+
+                  <div className="input-container ">
+                    <input
+                      className="heading-m gunmetal"
+                      type="number"
+                      value={metricHeight}
+                      onChange={(e) => {
+                        setMetricHeight(e.target.value);
+                        MetricBMI =
+                          metricWeight / (metricHeight * metricHeight);
+                      }}
+                      id="height"
+                    />
+                    <p className="heading-m metric-unit">cm</p>
+                  </div>
+                </div>
+
+                <div className="label-input-container">
+                  <label
+                    className="body-label  body-s gunmetal weight"
+                    htmlFor="weight"
+                  >
+                    Weight
+                  </label>
+                  <div className="input-container">
+                    <input
+                      value={metricWeight}
+                      onChange={(e) => {
+                        setMetricWeight(e.target.value);
+                        MetricBMI =
+                          metricWeight / (metricHeight * metricHeight);
+                      }}
+                      className="heading-m gunmetal"
+                      type="number"
+                      id="metric-weight"
+                    />
+                    <p className="heading-m metric-unit">kg</p>
+                  </div>
+                </div>
               </div>
             </>
           )}
           {metric === "imperial" && (
             <>
-              <label
-                className="body-label body-s gunmetal"
-                htmlFor="imperial-height-ft"
-              >
-                Height
-              </label>
-              <div className="input-imperial">
-                <div className="input-container ">
-                  <input
-                    value={imperialHeightFt}
-                    onChange={(e) => {
-                      setImperialHeightFt(e.target.value);
-                    }}
-                    className="heading-m gunmetal"
-                    type="number"
-                    id="imperial-height-ft"
-                  />
-                  <p className="heading-m metric-unit">ft</p>
+              <div className="form-inputs-container">
+                <div className="label-input-container ">
+                  <label
+                    className="body-label body-s gunmetal"
+                    htmlFor="imperial-height-ft"
+                  >
+                    Height
+                  </label>
+                  <div className="input-imperial">
+                    <div className="input-container ">
+                      <input
+                        value={imperialHeightFt}
+                        onChange={(e) => {
+                          setImperialHeightFt(e.target.value);
+                        }}
+                        className="heading-m gunmetal"
+                        type="number"
+                        id="imperial-height-ft"
+                      />
+                      <p className="heading-m metric-unit">ft</p>
+                    </div>
+                    <div className="input-container">
+                      <input
+                        value={imperialHeightIn}
+                        onChange={(e) => {
+                          setImperialHeightIn(e.target.value);
+                        }}
+                        className="heading-m gunmetal"
+                        type="number"
+                        id="imperial-height-in"
+                      />
+                      <p className="heading-m metric-unit">in</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="input-container">
-                  <input
-                    value={imperialHeightIn}
-                    onChange={(e) => {
-                      setImperialHeightIn(e.target.value);
-                    }}
-                    className="heading-m gunmetal"
-                    type="number"
-                    id="imperial-height-in"
-                  />
-                  <p className="heading-m metric-unit">in</p>
-                </div>
-              </div>
 
-              <label
-                className="body-label  body-s gunmetal weight"
-                htmlFor="imperial-weight-st"
-              >
-                Weight
-              </label>
-              <div className="input-imperial">
-                <div className="input-container">
-                  <input
-                    value={imperialWeightSt}
-                    onChange={(e) => {
-                      setImperialWeightSt(e.target.value);
-                    }}
-                    className="heading-m gunmetal"
-                    type="number"
-                    id="imperial-weight-st"
-                  />
-                  <p className="heading-m metric-unit">st</p>
-                </div>
-                <div className="input-container">
-                  <input
-                    value={imperialWeightLbs}
-                    onChange={(e) => {
-                      setImperialWeightLbs(e.target.value);
-                    }}
-                    className="heading-m gunmetal"
-                    type="number"
-                    id="imperial-weight-lbs"
-                  />
-                  <p className="heading-m metric-unit">lbs</p>
+                <div className="label-input-container  metric-label-input-container">
+                  <label
+                    className="body-label  body-s gunmetal weight"
+                    htmlFor="imperial-weight-st"
+                  >
+                    Weight
+                  </label>
+                  <div className="input-imperial">
+                    <div className="input-container">
+                      <input
+                        value={imperialWeightSt}
+                        onChange={(e) => {
+                          setImperialWeightSt(e.target.value);
+                        }}
+                        className="heading-m gunmetal"
+                        type="number"
+                        id="imperial-weight-st"
+                      />
+                      <p className="heading-m metric-unit">st</p>
+                    </div>
+                    <div className="input-container">
+                      <input
+                        value={imperialWeightLbs}
+                        onChange={(e) => {
+                          setImperialWeightLbs(e.target.value);
+                        }}
+                        className="heading-m gunmetal"
+                        type="number"
+                        id="imperial-weight-lbs"
+                      />
+                      <p className="heading-m metric-unit">lbs</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </>
