@@ -40,20 +40,3 @@ export default function Hero() {
     </>
   );
 }
-
-{
-  /* <BMIForm
-            metricHeight={metricHeight}
-            metricWeight={metricWeight}
-            setMetricHeight={setMetricHeight}
-            setMetricWeight={setMetricWeight}
-            imperialHeightFt={imperialHeightFt}
-            setImperialHeightFt={setImperialHeightFt}
-            imperialHeightIn={imperialHeightIn}
-            setImperialHeightIn={setImperialHeightIn}
-            imperialWeightSt={imperialWeightSt}
-            setImperialWeightSt={setImperialWeightSt}
-            imperialWeightLbs={imperialWeightLbs}
-            setImperialWeightLbs={setImperialWeightLbs}
-          /> */
-}

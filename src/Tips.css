@@ -8,12 +8,7 @@
   gap: 40px;
   background-image: linear-gradient(to bottom right, #fff, #f5f9ff);
 }
-/* .tip-container {
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  flex-direction: column;
-} */
+
 .tip-img-container {
   width: 64px;
   height: 64px;
@@ -26,4 +21,25 @@
 }
 .tip-title {
   margin-bottom: 24px;
+}
+@media screen and (min-width: 650px) {
+  .tip-img-container {
+    min-height: 64px;
+    min-width: 64px;
+    object-fit: contain;
+  }
+  .tips-container {
+    align-items: start;
+    padding: 60px 41px;
+  }
+  .tip-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .imgimg {
+    align-self: center;
+    height: 100%;
+  }
 }

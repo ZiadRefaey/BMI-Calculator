@@ -10,8 +10,10 @@ function Tip({ img, title, children }) {
         <div className="tip-img-container">
           <img src={img} alt="Tip icon" className="tip-icon" />
         </div>
-        <h4 className="gunmetal heading-m tip-title">{title}</h4>
-        <p className="electricblue body-m tip-desc">{children}</p>
+        <div className="tip-content">
+          <h4 className="gunmetal heading-m tip-title">{title}</h4>
+          <p className="electricblue body-m tip-desc">{children}</p>
+        </div>
       </div>
     </>
   );

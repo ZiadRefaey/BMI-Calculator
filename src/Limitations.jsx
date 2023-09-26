@@ -70,14 +70,16 @@ export default function Limitations() {
           their BMI outcomes, and in certain cases, the measurement may not be
           beneficial to use.
         </p>
-        {limitations.map((limit) => (
-          <Limit
-            key={limit.id}
-            icon={limit.icon}
-            title={limit.title}
-            description={limit.description}
-          />
-        ))}
+        <div className="limitations-cards-container">
+          {limitations.map((limit) => (
+            <Limit
+              key={limit.id}
+              icon={limit.icon}
+              title={limit.title}
+              description={limit.description}
+            />
+          ))}
+        </div>
       </section>
     </>
   );

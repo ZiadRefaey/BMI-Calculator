@@ -46,3 +46,24 @@
 .limit-header h4 {
   align-self: center;
 }
+.limitations-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 700px) {
+  .limitations-container {
+    text-align: center;
+  }
+  .limitations-cards-container {
+    margin-top: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .limit-container {
+    width: 45%;
+    min-height: 232px;
+  }
+}

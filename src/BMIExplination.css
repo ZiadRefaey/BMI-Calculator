@@ -18,6 +18,7 @@
 }
 .explination-body {
   padding: 0px 24px;
+  width: 100%;
 }
 .explination-title {
   margin-bottom: 32px;
@@ -25,4 +26,15 @@
   font-family: "Inter", sans-serif;
   line-height: 1.1;
   font-weight: 600;
+}
+@media screen and (min-width: 700px) {
+  .bmi-explination-container {
+    padding-top: 240px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    width: 110%;
+    margin-left: -10%;
+    gap: 75px;
+  }
 }

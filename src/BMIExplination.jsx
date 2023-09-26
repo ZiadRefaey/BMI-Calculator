@@ -6,8 +6,10 @@ export default function BMIExplination() {
   return (
     <>
       <section className="bmi-explination-container">
-        <div className="explination-img">
-          <img src={explination} alt="A guy eating sushi"></img>
+        <div className="imgimg">
+          <div className="explination-img">
+            <img src={explination} alt="A guy eating sushi"></img>
+          </div>
         </div>
         <div className="explination-body">
           <h3 className="gunmetal explination-title">
