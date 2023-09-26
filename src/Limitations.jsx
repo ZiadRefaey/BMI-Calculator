@@ -4,6 +4,9 @@ import age from "./assets/images/icon-age.svg";
 import muscle from "./assets/images/icon-muscle.svg";
 import pregnancy from "./assets/images/icon-pregnancy.svg";
 import race from "./assets/images/icon-race.svg";
+import CurvedRight from "./assets/images/pattern-curved-line-right.svg";
+
+import { useEffect, useState } from "react";
 const limitations = [
   {
     id: 1,
@@ -60,9 +63,10 @@ function Limit({ icon, title, description }) {
   );
 }
 export default function Limitations() {
-  return (
-    <>
-      <section className="limitations-container">
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const SmallScreenComponent = (
+    <section className="limitations-container">
+      <div className="limitations-text">
         <h3 className="gunmetal heading-i">Limitations of BMI</h3>
         <p className="electricblue body-m limitations-description">
           Although BMI is often a practical indicator of healthy weight, it is
@@ -70,17 +74,87 @@ export default function Limitations() {
           their BMI outcomes, and in certain cases, the measurement may not be
           beneficial to use.
         </p>
-        <div className="limitations-cards-container">
-          {limitations.map((limit) => (
-            <Limit
-              key={limit.id}
-              icon={limit.icon}
-              title={limit.title}
-              description={limit.description}
-            />
-          ))}
+      </div>
+      <div className="limitations-cards-container">
+        {limitations.map((limit) => (
+          <Limit
+            key={limit.id}
+            icon={limit.icon}
+            title={limit.title}
+            description={limit.description}
+          />
+        ))}
+      </div>
+    </section>
+  );
+  const LargeScreenComponent = (
+    <section className="limitations-container">
+      <img
+        src={CurvedRight}
+        alt="Curved line to the right"
+        className="curved-right"
+      />
+      <div className="limitations-text">
+        <h3 className="gunmetal heading-i">Limitations of BMI</h3>
+        <p className="electricblue body-m limitations-description">
+          Although BMI is often a practical indicator of healthy weight, it is
+          not suited for every person. Specific groups should carefully consider
+          their BMI outcomes, and in certain cases, the measurement may not be
+          beneficial to use.
+        </p>
+      </div>
+      <div className="limitations-cards-container">
+        <div className="limitations-group-1">
+          <Limit
+            icon={limitations[0].icon}
+            title={limitations[0].title}
+            description={limitations[0].description}
+          />
         </div>
-      </section>
-    </>
+
+        <div className="limitations-group-2">
+          <Limit
+            icon={limitations[1].icon}
+            title={limitations[1].title}
+            description={limitations[1].description}
+          />
+
+          <Limit
+            icon={limitations[2].icon}
+            title={limitations[2].title}
+            description={limitations[2].description}
+          />
+        </div>
+
+        <div className="limitations-group-3">
+          <Limit
+            icon={limitations[3].icon}
+            title={limitations[3].title}
+            description={limitations[3].description}
+          />
+
+          <Limit
+            icon={limitations[4].icon}
+            title={limitations[4].title}
+            description={limitations[4].description}
+          />
+        </div>
+      </div>
+    </section>
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  return (
+    <>{windowWidth < 1300 ? SmallScreenComponent : LargeScreenComponent}</>
   );
 }

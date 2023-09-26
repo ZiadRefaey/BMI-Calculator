@@ -5,6 +5,7 @@
   justify-content: center;
   gap: 48px;
   flex-direction: column;
+  position: relative;
 }
 .explination-img {
   width: 100%;
@@ -19,6 +20,8 @@
 .explination-body {
   padding: 0px 24px;
   width: 100%;
+  align-self: flex-end;
+  margin-bottom: 40px;
 }
 .explination-title {
   margin-bottom: 32px;
@@ -26,6 +29,9 @@
   font-family: "Inter", sans-serif;
   line-height: 1.1;
   font-weight: 600;
+}
+.curved-left {
+  display: none;
 }
 @media screen and (min-width: 700px) {
   .bmi-explination-container {
@@ -36,5 +42,24 @@
     width: 110%;
     margin-left: -10%;
     gap: 75px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .bmi-explination-container {
+    /* padding: 65px 140px 0px 140px; */
+    padding: 65px 0px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0px;
+    margin: auto;
+    gap: 75px;
+  }
+  .curved-left {
+    width: 85px;
+    height: 200px;
+    display: inline;
+    position: absolute;
+    top: 13px;
+    right: 0;
   }
 }

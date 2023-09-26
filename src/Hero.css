@@ -12,7 +12,7 @@
   text-align: center;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
-  background-image: linear-gradient(to bottom right, #fff, #cfe1fa);
+  background-image: linear-gradient(to right, #fff, #cfe1fa);
   position: relative;
 }
 .hero-header {
@@ -61,7 +61,6 @@
 .radio-button {
   width: 128px;
   width: 100%;
-
   display: flex;
   align-items: start;
   justify-content: start;
@@ -102,6 +101,11 @@
   width: 100%;
   border-radius: 12px;
   border: 1px solid var(--Borders);
+  transition: 0.1s all;
+  cursor: pointer;
+}
+.input-container:hover {
+  border: 1px solid var(--Blue);
 }
 .body-label {
   margin-bottom: 8px;
@@ -115,6 +119,11 @@
   font-size: 24px;
   width: 100%;
   max-width: 173px;
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
 }
 .bmi-results {
   background-image: linear-gradient(to right, #345ff6, #587dff);
@@ -224,5 +233,34 @@
     justify-content: start;
     flex-direction: column;
     text-align: start;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .hero {
+    height: 737px;
+    width: 978px;
+    margin-left: 24px;
+    padding: 75px 298px 200px 116px;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    gap: 127px;
+  }
+  .bmi-calculator {
+    left: 712px;
+    top: 167px;
+    width: 564px;
+  }
+  .hero-header h1 {
+    width: 100%;
+  }
+  .hero-header p {
+    max-width: 465px;
+    font-size: 1rem !important;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+    padding: 0px;
   }
 }

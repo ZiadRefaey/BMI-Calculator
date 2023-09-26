@@ -1,14 +1,16 @@
 .tips-container {
   margin-top: 71.61px;
   padding: 56px 20px;
+
+  background-image: linear-gradient(to bottom right, #fff, #f5f9ff);
+}
+.tips-cards-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 40px;
-  background-image: linear-gradient(to bottom right, #fff, #f5f9ff);
 }
-
 .tip-img-container {
   width: 64px;
   height: 64px;
@@ -38,8 +40,26 @@
     justify-content: center;
     gap: 40px;
   }
-  .imgimg {
-    align-self: center;
-    height: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .tips-cards-container {
+    padding: 60px 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 1160px;
+    margin: auto;
+    gap: 32px;
+  }
+  .tip-container {
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 45px;
+  }
+  .tip-img-container {
+    padding: 0;
+    margin: 0;
   }
 }

@@ -22,18 +22,20 @@ export default function Tips() {
   return (
     <>
       <div className="tips-container">
-        <Tip img={eating} title={"Healthy eating"}>
-          Healthy eating promotes weight control, disease prevention, better
-          digestion, immunity, mental clarity, and mood.
-        </Tip>
-        <Tip img={exercise} title={"Regular exercise"}>
-          Exercise improves fitness, aids weight control, elevates mood, and
-          reduces disease risk, fostering wellness and longevity.
-        </Tip>
-        <Tip img={sleep} title={"Adequate sleep"}>
-          Sleep enhances mental clarity, emotional stability, and physical
-          wellness, promoting overall restoration and rejuvenation.
-        </Tip>
+        <div className="tips-cards-container">
+          <Tip img={eating} title={"Healthy eating"}>
+            Healthy eating promotes weight control, disease prevention, better
+            digestion, immunity, mental clarity, and mood.
+          </Tip>
+          <Tip img={exercise} title={"Regular exercise"}>
+            Exercise improves fitness, aids weight control, elevates mood, and
+            reduces disease risk, fostering wellness and longevity.
+          </Tip>
+          <Tip img={sleep} title={"Adequate sleep"}>
+            Sleep enhances mental clarity, emotional stability, and physical
+            wellness, promoting overall restoration and rejuvenation.
+          </Tip>
+        </div>
       </div>
     </>
   );

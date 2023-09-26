@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import "./hero.css";
 export default function BMIForm({
@@ -17,6 +17,19 @@ export default function BMIForm({
   const [imperialHeightIn, setImperialHeightIn] = useState("");
   const [imperialWeightSt, setImperialWeightSt] = useState("");
   const [imperialWeightLbs, setImperialWeightLbs] = useState("");
+  const inputRef = {
+    metricH: useRef(null),
+    metricW: useRef(null),
+    imperialFt: useRef(null),
+    imperialIn: useRef(null),
+    imperialSt: useRef(null),
+    imperialLb: useRef(null),
+  };
+  function handleParentClick(inputName) {
+    if (inputRef[inputName].current) {
+      inputRef[inputName].current.focus();
+    }
+  }
   let imperialWeight = imperialWeightSt * 14 + imperialWeightLbs;
   let imperialHeight = imperialHeightFt * 12 + imperialHeightIn;
   useEffect(
@@ -101,7 +114,10 @@ export default function BMIForm({
                     Height
                   </label>
 
-                  <div className="input-container ">
+                  <div
+                    className="input-container "
+                    onClick={() => handleParentClick("metricH")}
+                  >
                     <input
                       className="heading-m gunmetal"
                       type="number"
@@ -112,6 +128,7 @@ export default function BMIForm({
                           metricWeight / (metricHeight * metricHeight);
                       }}
                       id="height"
+                      ref={inputRef.metricH}
                     />
                     <p className="heading-m metric-unit">cm</p>
                   </div>
@@ -124,7 +141,10 @@ export default function BMIForm({
                   >
                     Weight
                   </label>
-                  <div className="input-container">
+                  <div
+                    className="input-container"
+                    onClick={() => handleParentClick("metricW")}
+                  >
                     <input
                       value={metricWeight}
                       onChange={(e) => {
@@ -135,6 +155,7 @@ export default function BMIForm({
                       className="heading-m gunmetal"
                       type="number"
                       id="metric-weight"
+                      ref={inputRef.metricW}
                     />
                     <p className="heading-m metric-unit">kg</p>
                   </div>
@@ -153,7 +174,10 @@ export default function BMIForm({
                     Height
                   </label>
                   <div className="input-imperial">
-                    <div className="input-container ">
+                    <div
+                      className="input-container "
+                      onClick={() => handleParentClick("imperialFt")}
+                    >
                       <input
                         value={imperialHeightFt}
                         onChange={(e) => {
@@ -162,10 +186,14 @@ export default function BMIForm({
                         className="heading-m gunmetal"
                         type="number"
                         id="imperial-height-ft"
+                        ref={inputRef.imperialFt}
                       />
                       <p className="heading-m metric-unit">ft</p>
                     </div>
-                    <div className="input-container">
+                    <div
+                      className="input-container"
+                      onClick={() => handleParentClick("imperialIn")}
+                    >
                       <input
                         value={imperialHeightIn}
                         onChange={(e) => {
@@ -174,6 +202,7 @@ export default function BMIForm({
                         className="heading-m gunmetal"
                         type="number"
                         id="imperial-height-in"
+                        ref={inputRef.imperialIn}
                       />
                       <p className="heading-m metric-unit">in</p>
                     </div>
@@ -188,7 +217,10 @@ export default function BMIForm({
                     Weight
                   </label>
                   <div className="input-imperial">
-                    <div className="input-container">
+                    <div
+                      className="input-container"
+                      onClick={() => handleParentClick("imperialSt")}
+                    >
                       <input
                         value={imperialWeightSt}
                         onChange={(e) => {
@@ -197,10 +229,14 @@ export default function BMIForm({
                         className="heading-m gunmetal"
                         type="number"
                         id="imperial-weight-st"
+                        ref={inputRef.imperialSt}
                       />
                       <p className="heading-m metric-unit">st</p>
                     </div>
-                    <div className="input-container">
+                    <div
+                      className="input-container"
+                      onClick={() => handleParentClick("imperialLb")}
+                    >
                       <input
                         value={imperialWeightLbs}
                         onChange={(e) => {
@@ -209,6 +245,7 @@ export default function BMIForm({
                         className="heading-m gunmetal"
                         type="number"
                         id="imperial-weight-lbs"
+                        ref={inputRef.imperialLb}
                       />
                       <p className="heading-m metric-unit">lbs</p>
                     </div>
