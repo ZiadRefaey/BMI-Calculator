@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import "./hero.css";
+import "./Hero.css";
 export default function BMIForm({
   metric,
   setMetric,
