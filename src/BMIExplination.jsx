@@ -1,5 +1,5 @@
 import "./index.css";
-import "./BMIexplination.css";
+import "./BMIExplination.css";
 import CurvedLeft from "./assets/images/pattern-curved-line-left.svg";
 import explination from "./assets/images/image-man-eating.webp";
 export default function BMIExplination() {
